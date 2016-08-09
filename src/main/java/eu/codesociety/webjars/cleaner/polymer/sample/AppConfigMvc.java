@@ -1,5 +1,9 @@
 package eu.codesociety.webjars.cleaner.polymer.sample;
 
+import java.util.SortedMap;
+import java.util.function.Function;
+import java.util.regex.Pattern;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -13,7 +17,11 @@ public class AppConfigMvc extends WebMvcConfigurerAdapter {
 
 	@Bean
 	public WebJarAssetLocator webJarAssetLocator() {
-		WebJarAssetLocator locator = new WebJarAssetLocator();
+		SortedMap<String, String> index = WebJarAssetLocator.getFullPathIndex(
+				Pattern.compile(".*"), 
+				WebJarAssetLocator.class.getClassLoader());
+		Function<String, String> f = a -> (a.equals("polymer")) ? "github-com-Polymer-polymer" : a;
+		WebJarAssetLocator locator = new WebJarAssetLocator(index, a -> f.apply(a));
 		return locator;
 	}
 	
