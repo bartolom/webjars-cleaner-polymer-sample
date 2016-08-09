@@ -1,1 +1,1 @@
-# webjars-locator-cleaner-sample
+# webjars-cleaner-polymer-sample
