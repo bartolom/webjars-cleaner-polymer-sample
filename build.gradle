@@ -16,10 +16,13 @@ apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 apply plugin: 'project-report'
 
+
 jar {
-	baseName = 'webjars-cleaner-polymer-sample'
+	group = 'eu.codesociety'
 	version = '0.0.1-SNAPSHOT'
+	baseName = 'webjars-cleaner-polymer-sample'
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -30,18 +33,22 @@ repositories {
 }
 
 configurations.all {
-	exclude module: 'polymer'
+	exclude module: 'github-com-Polymer-polymer'
+	//exclude module: 'spring-boot-starter-logging'
 }
 
 dependencies {
+	//compile 'org.springframework.boot:spring-boot-starter-log4j2'
+	//compile 'org.apache.logging.log4j:log4j-core:2.6.2'
 	compile 'org.springframework.boot:spring-boot-starter-actuator'
 	compile 'org.springframework.boot:spring-boot-devtools'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.webjars:webjars-locator:0.30'
 	compile 'org.webjars:webjars-locator-core:0.32-SNAPSHOT'
+	compile 'eu.codesociety:webjars-cleaner-polymer:0.0.1-SNAPSHOT'
 	
-	compile 'org.webjars.bower:github-com-webcomponents-webcomponentsjs:0.7.22'
-	compile 'org.webjars.bower:github-com-polymer-polymer:1.6.1'
+	//compile 'org.webjars.bower:github-com-webcomponents-webcomponentsjs:0.7.20'
+	//compile 'org.webjars.bower:github-com-Polymer-polymer:1.6.1'
 	compile 'org.webjars.bower:github-com-polymerelements-paper-input:1.1.15'
 	
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
