@@ -33,13 +33,13 @@ repositories {
 }
 
 configurations.all {
+	exclude module: 'polymer'
+	exclude module: 'webcomponentsjs'
 	exclude module: 'github-com-Polymer-polymer'
-	//exclude module: 'spring-boot-starter-logging'
+	exclude module: 'github-com-PolymerElements-iron-meta'
 }
 
 dependencies {
-	//compile 'org.springframework.boot:spring-boot-starter-log4j2'
-	//compile 'org.apache.logging.log4j:log4j-core:2.6.2'
 	compile 'org.springframework.boot:spring-boot-starter-actuator'
 	compile 'org.springframework.boot:spring-boot-devtools'
 	compile 'org.springframework.boot:spring-boot-starter-web'
@@ -47,9 +47,13 @@ dependencies {
 	compile 'org.webjars:webjars-locator-core:0.32-SNAPSHOT'
 	compile 'eu.codesociety:webjars-cleaner-polymer:0.0.1-SNAPSHOT'
 	
-	//compile 'org.webjars.bower:github-com-webcomponents-webcomponentsjs:0.7.20'
-	//compile 'org.webjars.bower:github-com-Polymer-polymer:1.6.1'
+	
 	compile 'org.webjars.bower:github-com-polymerelements-paper-input:1.1.15'
+	compile 'org.webjars.bower:github-com-polymer-polymer:1.6.0'
+	compile 'org.webjars.bower:github-com-webcomponents-webcomponentsjs:0.7.22'
+	
+	compile 'org.webjars.bower:github-com-Saulis-iron-data-table:1.0.1'
+	compile 'org.webjars.bower:github-com-polymerelements-iron-ajax:1.4.3'
 	
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 }

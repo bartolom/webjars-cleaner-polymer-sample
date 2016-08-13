@@ -1,0 +1,205 @@
+{
+    "results": [
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "donna",
+                    "last": "davis"
+                },
+                "location": {
+                    "street": "5280 dublin road",
+                    "city": "Limerick",
+                    "state": "hawaii",
+                    "zip": 48371
+                },
+                "email": "donna.davis@example.com",
+                "username": "whitebird347",
+                "password": "salami",
+                "salt": "cg5uDi8L",
+                "md5": "4daea30cea63dc12bcb99dda2796d7d8",
+                "sha1": "f7ae9d7a860cd706e043f9a7ed898c84e4aad6e2",
+                "sha256": "7769fa6dcd3d795f93b9e3064d13efe1925ce741fd07db982dd0bee390dacf08",
+                "registered": 1049320624,
+                "dob": 1303979587,
+                "phone": "051-860-2380",
+                "cell": "081-912-8917",
+                "PPS": "9421093T",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/92.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/92.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/92.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "samuel",
+                    "last": "kelley"
+                },
+                "location": {
+                    "street": "8368 dublin road",
+                    "city": "Carrigaline",
+                    "state": "iowa",
+                    "zip": 46037
+                },
+                "email": "samuel.kelley@example.com",
+                "username": "redmeercat301",
+                "password": "word",
+                "salt": "qzLIfPaU",
+                "md5": "f365d0bbb9a89026869942231ad1df61",
+                "sha1": "6428ed2eb402bd1527eb8720720fa9ea0fd3ddd8",
+                "sha256": "94758427b6a965edae305f940e02551e08a0f06067738732baff69fcabae7649",
+                "registered": 1213772773,
+                "dob": 721214121,
+                "phone": "031-144-9861",
+                "cell": "081-605-3682",
+                "PPS": "6652292T",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/55.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/55.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/55.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "ms",
+                    "first": "katie",
+                    "last": "butler"
+                },
+                "location": {
+                    "street": "1489 springfield road",
+                    "city": "Gorey",
+                    "state": "georgia",
+                    "zip": 98900
+                },
+                "email": "katie.butler@example.com",
+                "username": "beautifulladybug546",
+                "password": "ontario",
+                "salt": "7kR5tNFx",
+                "md5": "09942d76e8e74083ae5128044481f9f5",
+                "sha1": "14f066f10b6504d56adc0b940396f5dbada8f792",
+                "sha256": "e8e8b51af3e06b4fee925c0b5974f7018e9d9be41a4a90c30d2edf2c5bd57178",
+                "registered": 1048146620,
+                "dob": 1207641587,
+                "phone": "071-320-5987",
+                "cell": "081-501-0912",
+                "PPS": "4026682T",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/62.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/62.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/62.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "bernard",
+                    "last": "mitchell"
+                },
+                "location": {
+                    "street": "8055 westmoreland street",
+                    "city": "Birr",
+                    "state": "nebraska",
+                    "zip": 78220
+                },
+                "email": "bernard.mitchell@example.com",
+                "username": "whiteleopard236",
+                "password": "american",
+                "salt": "9hOkuSSg",
+                "md5": "c5bae05c92ab423fc7af0c727d5d0cac",
+                "sha1": "48eb2897f5edf6195b49554b9cffa1831bf57ed1",
+                "sha256": "05ec933f0f905a393807d3ac0c91b6e9298b481e7d883493ed0c06e2fc506881",
+                "registered": 1225459592,
+                "dob": 186051344,
+                "phone": "051-409-0422",
+                "cell": "081-849-2590",
+                "PPS": "1191403T",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/69.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/69.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/69.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "amy",
+                    "last": "reynolds"
+                },
+                "location": {
+                    "street": "4495 novara avenue",
+                    "city": "New Ross",
+                    "state": "texas",
+                    "zip": 41573
+                },
+                "email": "amy.reynolds@example.com",
+                "username": "greengorilla845",
+                "password": "cezer121",
+                "salt": "I2ct7vGl",
+                "md5": "c365f0b52b04f9d554039466afbd4e74",
+                "sha1": "266ae3b644be61655db8658d42c15d71065aa5ac",
+                "sha256": "727242066daa05bff2cdafb414fa4e3933bbec351d1e54c6db694898914c1a31",
+                "registered": 1031185448,
+                "dob": 1434406094,
+                "phone": "041-146-5260",
+                "cell": "081-156-9645",
+                "PPS": "5000866TA",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/61.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/61.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/61.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "darryl",
+                    "last": "caldwell"
+                },
+                "location": {
+                    "street": "8110 dame street",
+                    "city": "Dundalk",
+                    "state": "delaware",
+                    "zip": 28437
+                },
+                "email": "darryl.caldwell@example.com",
+                "username": "goldencat943",
+                "password": "bean",
+                "salt": "X0zg0wBq",
+                "md5": "a4f0fc75334340ec2d7121d28fc33c50",
+                "sha1": "71c6c6a8a2614df0dbd66844a99266afa81eb680",
+                "sha256": "593c46639b7115cc1ef523cbb443598fd0cb1dafa4e40e87b6fadfc52fc3e7ac",
+                "registered": 1149661666,
+                "dob": 1259061941,
+                "phone": "051-919-0654",
+                "cell": "081-425-5272",
+                "PPS": "3496761T",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/6.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/6.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/6.jpg"
+                }
+            }
+        }
+    ],
+    "nationality": "IE",
+    "seed": "8e74179fc20a0b7405",
+    "version": "0.7"
+}

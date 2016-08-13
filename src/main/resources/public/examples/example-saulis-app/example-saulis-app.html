@@ -1,0 +1,52 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-data-table/iron-data-table.html">
+<link rel="import" href="../../bower_components/iron-data-table/data-table-column.html">
+<link rel="import" href="../../bower_components/iron-data-table/default-styles.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="example-saulis-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+    <p>This custom element contains a iron-data-table element available as a github project from Saulis</p>
+
+    <iron-ajax url="users.json" last-response="{{users}}" auto></iron-ajax>
+    <iron-data-table items="[[users.results]]">
+      <data-table-column name="Picture" width="50px" flex="0">
+        <template>
+          <img src="[[item.user.picture.thumbnail]]">
+        </template>
+      </data-table-column>
+      <data-table-column name="First Name">
+        <template>[[item.user.name.first]]</template>
+      </data-table-column>
+      <data-table-column name="Last Name">
+        <template>[[item.user.name.last]]</template>
+      </data-table-column>
+      <data-table-column name="Email">
+        <template>[[item.user.email]]</template>
+      </data-table-column>
+    </iron-data-table>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'example-saulis-app',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'example-saulis-app'
+        },
+        users: Object
+      }
+
+    });
+  </script>
+</dom-module>
