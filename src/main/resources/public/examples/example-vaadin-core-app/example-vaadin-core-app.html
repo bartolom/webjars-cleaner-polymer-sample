@@ -1,0 +1,51 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="example-vaadin-core-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+    <p>This custom element contains a vaadin-grid element available as a github project from
+      <a href="https://vaadin.com/docs/-/part/elements/elements-getting-started.html">Vaadin Elements</a></p>
+
+    <iron-ajax url="data.json" last-response="{{users}}" auto></iron-ajax>
+    <vaadin-grid selection-mode="multi" items="{{users}}">
+       <table>
+         <!-- Define the columns and their mapping to data properties. -->
+         <col name="firstName">
+         <col name="lastName">
+         <col name="email">
+
+         <!-- Define the column headings. -->
+         <thead>
+           <tr>
+             <th>First Name</th>
+             <th>Last Name</th>
+             <th>Email</th>
+           </tr>
+         </thead>
+       </table>
+     </vaadin-grid>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'example-vaadin-core-app',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'example-vaadin-core-app'
+        },
+        users: Object
+      }
+
+    });
+  </script>
+</dom-module>

@@ -55,5 +55,7 @@ dependencies {
 	compile 'org.webjars.bower:github-com-Saulis-iron-data-table:1.0.1'
 	compile 'org.webjars.bower:github-com-polymerelements-iron-ajax:1.4.3'
 	
+	compile 'org.webjars.bower:github-com-vaadin-vaadin-grid:1.1.1'
+	
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
