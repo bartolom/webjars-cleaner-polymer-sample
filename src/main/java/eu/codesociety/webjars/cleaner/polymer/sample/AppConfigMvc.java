@@ -1,6 +1,7 @@
 package eu.codesociety.webjars.cleaner.polymer.sample;
 
 import java.util.SortedMap;
+import java.util.function.Function;
 import java.util.regex.Pattern;
 
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ import org.webjars.WebJarAssetLocator;
 import eu.codesociety.webjars.cleaner.polymer.PackForPolymer;
 import eu.codesociety.webjars.cleaner.polymer.PackForSaulis;
 import eu.codesociety.webjars.cleaner.polymer.PackForVaadinCore;
+import eu.codesociety.webjars.cleaner.polymer.PolymerWebJarAssetLocator;
 import eu.codesociety.webjars.cleaner.polymer.PomValueExtractor;
 
 @Configuration
@@ -40,9 +42,11 @@ public class AppConfigMvc extends WebMvcConfigurerAdapter {
 		logger.info("Reduced from {} to {}", index.size(), cleanedIndex.size());
 		cleanedIndex.forEach((k, v) -> logger.info("  - {}", k));
 
-		WebJarAssetLocator locator = new WebJarAssetLocator(
+		Function<String, String> f = PomValueExtractor.tolerateQualifiedReferences(index);
+		
+		PolymerWebJarAssetLocator locator = new PolymerWebJarAssetLocator(
 				cleanedIndex,
-				a -> PomValueExtractor.tolerateQualifiedReferences(index).apply(a));
+				a -> f.apply(a));
 
 		return locator;
 	}
