@@ -1,8 +1,9 @@
 buildscript {
 	ext {
-		springBootVersion = '1.4.0.RELEASE'
+		springBootVersion = '2.0.0.M5'
 	}
 	repositories {
+		maven { url 'https://repo.spring.io/libs-milestone' }
 		mavenCentral()
 		jcenter()
 	}
@@ -13,7 +14,8 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 apply plugin: 'project-report'
 
 
@@ -23,19 +25,34 @@ jar {
 	baseName = 'webjars-cleaner-polymer-sample'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+//sourceCompatibility = 1.9
+//targetCompatibility = 1.9
+
+// as of STS 3.9.1 based on 4.6.Oxygen.1a and Buildship 2.1.2 I still need this workaround
+// https://discuss.gradle.org/t/is-java-9-supported/24221/2
+eclipse {
+    jdt {
+        javaRuntimeName = "JavaSE-9"
+        file.withProperties { p ->
+            p['org.eclipse.jdt.core.compiler.compliance'] = '9'
+            p['org.eclipse.jdt.core.compiler.source'] = '9'
+            p['org.eclipse.jdt.core.compiler.codegen.targetPlatform'] = '9'
+        }
+    }
+}
+
 
 repositories {
+	maven { url 'https://repo.spring.io/libs-milestone' }
 	mavenCentral()
 	mavenLocal()
 	jcenter()
 }
 
 configurations.all {
-	//exclude module: 'polymer'
+	exclude module: 'polymer'
+	//exclude module: 'github-com-polymer-polymer'
 	exclude module: 'webcomponentsjs'
-	exclude module: 'github-com-polymer-polymer'
 	//exclude module: 'github-com-PolymerElements-iron-meta'
 }
 
@@ -43,9 +60,9 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-actuator'
 	compile 'org.springframework.boot:spring-boot-devtools'
 	compile 'org.springframework.boot:spring-boot-starter-web'
-	compile 'org.webjars:webjars-locator:0.30'
-	compile 'org.webjars:webjars-locator-core:0.32'
-	compile 'eu.codesociety:webjars-cleaner-polymer:0.0.1-SNAPSHOT'
+	compile 'org.webjars:webjars-locator:0.32-1'
+	compile 'org.webjars:webjars-locator-core:0.34'
+	compile 'eu.codesociety:webjars-cleaner-polymer:0.0.2-SNAPSHOT'
 	
 	//compile 'org.webjars.bower:github-com-polymerelements-paper-toast:2.0.0'
 	compile 'org.webjars.bower:github-com-polymerelements-paper-toolbar:2.0.0'
@@ -72,9 +89,10 @@ dependencies {
 	//compile 'org.webjars.bower:github-com-polymer-polymer:v2.0.0'
 	
 	//compile 'org.webjars.npm:polymer__polymer:2.0.2'
-	//compile group:'org.webjars.bower', name: 'github-com-polymer-polymer', version:'2.0.0'
-	compile group:'org.webjars.bower', name: 'polymer', version:'2.0.2'
-	
+	compile group:'org.webjars.bower', name: 'github-com-polymer-polymer', version:'v2.0.2'
+	//compile group:'org.webjars.bower', name: 'polymer', version:'2.0.2'
+
+	//compile 'org.webjars.bower:github-com-webcomponents-webcomponentsjs:v1.0.8'	
 	compile 'org.webjars.bower:github-com-webcomponents-webcomponentsjs:v1.0.7'
 	compile 'org.webjars.bower:github-com-webcomponents-shadycss:v1.0.5'
 	//compile 'org.webjars.bower:github-com-webcomponents-webcomponentsjs:0.7.22'
