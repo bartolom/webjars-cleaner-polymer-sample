@@ -19,7 +19,7 @@ apply plugin: 'project-report'
 
 jar {
 	group = 'eu.codesociety'
-	version = '0.0.1-SNAPSHOT'
+	version = '0.0.2-SNAPSHOT'
 	baseName = 'webjars-cleaner-polymer-sample'
 }
 
